@@ -5,5 +5,6 @@ class AddRelationBetweenEntityAndGroup < ActiveRecord::Migration[7.0]
       t.references :group, null: false, foreign_key: true
 
       t.timestamps
+    end
   end
 end
