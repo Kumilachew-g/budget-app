@@ -1,10 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @group %>
-
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+<main class="bg-gray-200 h-screen flex flex-col">
+  <header>
+    <nav class="flex items-center justify-between background-blue p-4 text-white">   
+      <a href='/'><i class="fas fa-arrow-left text-2xl"></i></a>
+      <h1>Transactions</h1>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </nav>
+  </header>
+  <p style="color: green"><%= notice %></p>
+  <div class="flex flex-col justify-between grow">
+    <%= render @group %>
+    <div class="bg-green-500 text-white w-full p-3 flex">
+      <%= link_to "New Transaction", new_entity_path, class: "border border-white w-full p-3 text-center" %>
+    </div>
+  </div>
+</main>
+<%= button_to "Destroy this group", @group, method: :delete %>
