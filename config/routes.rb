@@ -7,5 +7,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "home#index"
+  # root "home#index"
+
+  devise_scope :user do
+    authenticated :user do
+      root 'groups#new', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root "home#index", as: :unauthenticated_root
+    end
+  end
 end
