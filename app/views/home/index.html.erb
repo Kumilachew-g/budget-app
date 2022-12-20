@@ -1,2 +1,12 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="flex flex-col h-screen w-screen text-center">
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+  <div class="flex flex-col h-3/6 justify-end">
+    <h1 class="text-4xl font-bold pb-10 text-gray-600">
+      Budget App
+    </h1>
+  </div>
+  <div class="text-lg flex flex-col md:flex-row h-3/6 md:items-end md:w-screen p-4 justify-end md:justify-center gap-3 md:pb-5">
+    <%= link_to "LOG IN", new_user_session_path, class: "rounded text-white background-blue py-2 md:w-3/6 md:h-auto" %>
+    <%= link_to "SIGN UP", new_user_registration_path, class: "rounded text-gray-500 py-2 md:w-3/6 md:h-auto" %>
+  </div>
+</div>
