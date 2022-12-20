@@ -1,0 +1,23 @@
+<main class="bg-gray-200 h-screen flex flex-col">
+  <header>
+    <nav class="flex items-center justify-between background-blue p-4 text-white">   
+      <i class="fa-solid fa-bars text-2xl"></i>
+      <h1>Categories</h1>
+      <%= button_to destroy_user_session_path, method: :delete do %>
+        <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+      <% end %>
+    </nav>
+  </header>
+  <p style="color: green"><%= notice %></p>
+
+  <div class="flex flex-col justify-between grow">
+    <div class="p-2 flex flex-col gap-3" id="groups">
+      <% @groups.each do |group| %>
+        <%= render group %>
+      <% end %>
+    </div>
+    <div class="bg-green-500 text-white w-full p-3 flex">
+      <%= link_to "New Category", new_group_path, class: "border border-white w-full p-3 text-center" %>
+    </div>
+  </div>
+</main>

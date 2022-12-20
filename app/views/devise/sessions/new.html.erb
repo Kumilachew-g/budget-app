@@ -1,26 +1,30 @@
-<h2>Log in</h2>
+<main class="flex flex-col gap-3 bg-gray-200 h-screen">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: { class: 'flex flex-col gap-1' }) do |f| %>
+    <header>
+      <nav class="flex items-center justify-between background-blue p-4 text-white">   
+        <a href='/'><i class="fas fa-arrow-left text-2xl"></i></a>
+        <h1>LOGIN</h1>
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      </nav>
+    </header>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+    
+    <div class="field pt-2">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="text-center">
+    <%= link_to "Forget password ?", new_user_password_path, class: "text-gray-400" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</main>
