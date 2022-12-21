@@ -168,7 +168,7 @@ command:
 
 To run tests, run the following command:
 
-Example command:
+command:
 
 ```sh
   rspec
