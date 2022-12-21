@@ -1,8 +1,8 @@
 <main class="bg-gray-200 h-screen flex flex-col">
   <header>
-    <nav class="flex items-center justify-between background-blue p-4 text-white">   
+    <nav class="flex items-center justify-between background-blue p-4 text-white text-center font-bold text-1x p-3">   
       <i class="fa-solid fa-bars text-2xl"></i>
-      <h1>Categories</h1>
+      <h1>CATEGORIES</h1>
       <%= button_to destroy_user_session_path, method: :delete do %>
         <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
       <% end %>
@@ -17,7 +17,7 @@
       <% end %>
     </div>
     <div class="bg-green-500 text-white w-full p-3 flex">
-      <%= link_to "New Category", new_group_path, class: "border border-white w-full p-3 text-center" %>
+      <%= link_to "NEW CATEGORY", new_group_path, class: "border border-white w-full p-3 text-center" %>
     </div>
   </div>
 </main>
