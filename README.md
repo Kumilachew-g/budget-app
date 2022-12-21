@@ -111,8 +111,7 @@ After you're finished please remove all the comments and instructions!
 
   > Comming Soon!!!.
 
-- [Video Link]()
-  > Comming Soon!!!.
+- [Video Link](https://www.loom.com/share/6fac370e91174a9086b80956f2a0a0c4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
