@@ -39,7 +39,7 @@ RSpec.describe 'Register page', type: :feature do
   end
 
   it "shouldn't be able to enter to root route because email already taken" do
-    @user.save()
+    @user.save
     fill_in 'Full name', with: @user.name
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
@@ -49,23 +49,21 @@ RSpec.describe 'Register page', type: :feature do
     expect(page).to have_content('Email has already been taken')
   end
 
-    it 'Should be able to enter to root route because the data is valid' do
-        fill_in 'Full name', with: 'Kumilachew'
-        fill_in 'Email', with: 'kumie@csc.et'
-        fill_in 'Password', with: '123456'
-        fill_in 'Confirm Password', with: '123456'
-        click_button 'Next'
-        expect(page).to have_content('')
-    end
+  it 'Should be able to enter to root route because the data is valid' do
+    fill_in 'Full name', with: 'Kumilachew'
+    fill_in 'Email', with: 'kumie@csc.et'
+    fill_in 'Password', with: '123456'
+    fill_in 'Confirm Password', with: '123456'
+    click_button 'Next'
+    expect(page).to have_content('')
+  end
 
-    it "shouldn't be able to enter to root route because the pass don't match confirm" do
-        fill_in 'Full name', with: @user.name
-        fill_in 'Email', with: @user.email
-        fill_in 'Password', with: @user.password
-        fill_in 'Confirm Password', with: ''
-        click_button 'Next'
-        expect(page).to have_content('Password confirmation doesn\'t match Password')
-      end
-
-
+  it "shouldn't be able to enter to root route because the pass don't match confirm" do
+    fill_in 'Full name', with: @user.name
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @user.password
+    fill_in 'Confirm Password', with: ''
+    click_button 'Next'
+    expect(page).to have_content('Password confirmation doesn\'t match Password')
+  end
 end
