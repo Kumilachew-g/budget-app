@@ -67,7 +67,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> The tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -100,6 +100,7 @@ After you're finished please remove all the comments and instructions!
 - **Add new categories and delete it**
 - **Add new transactions and delete it**
 - **Display details of transactions**
+- **You can see how much money you spent**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
