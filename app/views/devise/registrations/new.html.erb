@@ -1,0 +1,30 @@
+<main class="bg-gray-200 h-screen">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'flex flex-col gap-1' }) do |f| %>
+    <header>
+      <nav class="flex items-center justify-between background-blue p-4 text-white">   
+        <a href='/'><i class="fas fa-arrow-left text-2xl"></i></a>
+        <h1>REGISTER</h1>
+        <div class="actions">
+          <%= f.submit "Next" %>
+        </div>
+      </nav>
+    </header>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field pt-2">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name", class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline py-2" %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+  <% end %>
+</main>

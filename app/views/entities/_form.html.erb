@@ -1,0 +1,32 @@
+<main class="bg-gray-200 h-screen">
+  <%= form_with(model: entity, html: { class: 'flex flex-col gap-1' }) do |form| %>
+    <header>
+      <nav class="flex items-center justify-between background-blue p-4 text-white">   
+        <a onclick="history.back()"><i class="fas fa-arrow-left text-2xl"></i></a>
+        <h1>NEW TRANSACTION</h1>
+        <div class="actions">
+          <%= form.submit "NEXT" %>
+        </div>
+      </nav>
+    </header>
+    <% if entity.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+        <ul>
+          <% entity.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="pt-2">
+      <%= form.text_field :name, required: true, placeholder: "Name", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+    <div>
+      <%= form.number_field :amount, required: true, placeholder: "Amount", class: "py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+    <div>
+      <%= form.select :group_ids, @categories.collect {|cat| [cat.name, cat.id]}, { include_blank: false }, required: true, class:"py-2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", multiple: true %>
+    </div>
+  <% end %>
+</main>

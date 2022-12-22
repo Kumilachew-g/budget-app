@@ -1,0 +1,14 @@
+<div class="shadow-md shadow-gray-200 hover:shadow-xl hover:shadow-gray-300" id="<%= dom_id group %>">
+  <%= link_to group_path(group), class: "flex items-center gap-4 w-full bg-white p-3" do%>
+    <img class="w-1/4" src="<%= group.icon %>">
+    <div class="grow">
+      <div class="flex justify-between w-full">
+        <h3 class="text-xl text-gray-400"><%= group.name %></h3>
+        <div class="font-bold">
+          $<%= group.entities.inject(0) { |sum, e| sum + (e.amount) }%>
+        </div>
+      </div>
+      <p class="text-gray-400"><%= group.created_at.strftime("%d %b %Y") %></p>
+    </div>
+  <% end %>
+</div>
