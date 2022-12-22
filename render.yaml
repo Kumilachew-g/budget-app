@@ -2,14 +2,13 @@ databases:
   - name: postgres
     databaseName: postgres
     user: mysite
-    ipAllowlist: []
 
 services:
   - type: web
     name: rails
     env: ruby
     buildCommand: './bin/render-build.sh'
-    startCommand: bundle exec rails s
+    startCommand: 'bundle exec puma -C config/puma.rb'
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -17,9 +16,3 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-
-  - type: redis
-    name: redis
-    ipAllowlist: []
-    plan: free
-    maxmemoryPolicy: noeviction
