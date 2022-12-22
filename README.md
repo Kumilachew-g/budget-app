@@ -108,7 +108,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://hana-kumie-1212.herokuapp.com/)
+- [Live Demo Link](https://budget-app-lfai.onrender.com/)
 
 - [Video Link](https://www.loom.com/share/6fac370e91174a9086b80956f2a0a0c4)
 
