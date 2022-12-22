@@ -1,6 +1,6 @@
 databases:
   - name: postgres
-    databaseName: postgres
+    databaseName: budget_app_development
     user: mysite
 
 services:
