@@ -9,7 +9,7 @@ services:
     name: rails
     env: ruby
     buildCommand: './bin/render-build.sh'
-    startCommand: 'bundle exec rails s
+    startCommand: bundle exec rails s
     envVars:
       - key: DATABASE_URL
         fromDatabase:
