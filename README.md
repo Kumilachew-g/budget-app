@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse Rails Capstone(Budget App)</b></h3>
+  <h3><b>Microverse Ruby on Rails Capstone(Budget App)</b></h3>
 
 </div>
 
