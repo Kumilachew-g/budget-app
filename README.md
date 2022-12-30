@@ -136,7 +136,7 @@ command:
 
 Clone this repository to your desired folder:
 
-commands:
+command:
 
 ```sh
   cd budget-app
