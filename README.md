@@ -173,7 +173,7 @@ command:
 ```sh
   rspec
 ```
-
+<!--
 ### Deployment
 
 You can deploy this project using: -->
